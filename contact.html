@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initialize Project | DeenFinacials.Co</title>
+    <style>
+        :root {
+            --bg-deep: #020617;
+            --glass-panel: rgba(15, 23, 42, 0.8);
+            --border-color: rgba(56, 189, 248, 0.2);
+            --neon-blue: #00a8ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            /* Cyber Grid Background */
+            background-image: 
+                linear-gradient(var(--border-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .terminal-window {
+            max-width: 500px;
+            width: 100%;
+            background: var(--glass-panel);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 60px rgba(0,0,0,0.6);
+            position: relative;
+        }
+
+        /* Decorative "System Status" dot */
+        .status-dot {
+            height: 10px;
+            width: 10px;
+            background-color: #22c55e; /* Green */
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px #22c55e;
+            margin-right: 10px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.8rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .channel-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-color);
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .channel-option:hover {
+            background: rgba(0, 168, 255, 0.1);
+            border-color: var(--neon-blue);
+            transform: translateX(5px);
+        }
+
+        .icon-box {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 40px;
+            text-align: center;
+        }
+
+        .text-group {
+            flex-grow: 1;
+        }
+
+        .channel-title {
+            display: block;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--neon-blue);
+        }
+
+        .channel-desc {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 3px;
+        }
+
+        .arrow {
+            opacity: 0.5;
+            transition: 0.3s;
+        }
+        .channel-option:hover .arrow {
+            opacity: 1;
+            transform: translateX(3px);
+            color: var(--neon-blue);
+        }
+
+        .cancel-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .cancel-link:hover { color: #fff; }
+
+    </style>
+</head>
+<body>
+
+    <div class="terminal-window">
+        <div style="margin-bottom: 10px; font-size: 0.8rem; color: var(--text-muted);">
+            <span class="status-dot"></span> SYSTEM ONLINE // SECURE CHANNEL
+        </div>
+        
+        <h1>Initialize Project</h1>
+
+        <a href="https://wa.me/2349138091264" class="channel-option">
+            <div class="icon-box">📱</div>
+            <div class="text-group">
+                <span class="channel-title">WhatsApp Priority</span>
+                <span class="channel-desc">Opens chat instantly. Fastest response.</span>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="mailto:deenfinacials@gmail.com" class="channel-option">
+            <div class="icon-box">✉️</div>
+            <div class="text-group">
+                <span class="channel-title">Email Brief</span>
+                <span class="channel-desc">Launches your mail app. Send detailed docs.</span>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="https://discord.com/users/1101254191202189402" class="channel-option">
+            <div class="icon-box">💬</div>
+            <div class="text-group">
+                <span class="channel-title">Discord Direct</span>
+                <span class="channel-desc">Add 'deenfinance'. Best for dev chat.</span>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="https://x.com/DeenFinance" class="channel-option">
+            <div class="icon-box">✖️</div>
+            <div class="text-group">
+                <span class="channel-title">X (Twitter) DM</span>
+                <span class="channel-desc">Follow & Message for quick inquiries.</span>
+            </div>
+            <div class="arrow">→</div>
+        </a>
+
+        <a href="index.html" class="cancel-link">× Cancel & Return to Dashboard</a>
+    </div>
+
+</body>
+</html>
