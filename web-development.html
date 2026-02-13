@@ -5,35 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web & App Development | DeenFinacials.Co</title>
     <style>
-        body { background-color: #050505; color: #f0f0f0; font-family: 'Segoe UI', sans-serif; padding: 20px; line-height: 1.6; }
-        .container { max-width: 800px; margin: 40px auto; background: #0f141f; padding: 40px; border-radius: 20px; border: 1px solid #222; }
-        h1 { color: #00a8ff; font-size: 2.5rem; margin-top: 0; }
-        h2 { border-bottom: 2px solid #00a8ff; display: inline-block; margin-top: 30px; color: #fff; }
-        .btn { background: #00a8ff; color: #000; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 30px;}
-        ul { background: #0a0e17; padding: 30px 50px; border-radius: 10px; border: 1px solid #333; margin-top: 20px; }
+        :root { --primary: #00a8ff; --dark-bg: #050505; --section-bg: #0f141f; --text-light: #f0f0f0; }
+        body { background-color: var(--dark-bg); color: var(--text-light); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
+        
+        .container { max-width: 800px; margin: 40px auto; }
+        .back-link { color: #888; text-decoration: none; display: inline-block; margin-bottom: 20px; font-weight: bold; }
+        .back-link:hover { color: var(--primary); }
+
+        /* The Professional Floating Card Look */
+        .content-card {
+            background-color: var(--section-bg);
+            padding: 60px 40px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 { color: var(--primary); font-size: 2.5rem; margin-top: 0; margin-bottom: 10px; }
+        p.subtitle { font-size: 1.2rem; color: #fff; margin-bottom: 40px; opacity: 0.9; }
+
+        h2 { border-bottom: 2px solid var(--primary); display: inline-block; margin-top: 40px; margin-bottom: 20px; color: #fff; padding-bottom: 10px; }
+        
+        /* Left-aligned text for readability */
+        .text-block { text-align: left; color: #ccc; font-size: 1.1rem; margin-bottom: 20px; }
+        
+        ul { text-align: left; background: #0a0e17; padding: 30px 50px; border-radius: 10px; border: 1px solid #333; margin-top: 10px; display: inline-block; width: 100%; box-sizing: border-box; }
         li { margin-bottom: 15px; color: #ccc; }
-        .back-link { color: #888; text-decoration: none; display: inline-block; margin-bottom: 20px; }
-        .back-link:hover { color: #00a8ff; }
+        li strong { color: var(--primary); }
+
+        .btn { background: var(--primary); color: #000; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 40px; font-size: 1.1rem; transition: 0.3s; }
+        .btn:hover { background: #fff; box-shadow: 0 0 15px var(--primary); }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="index.html" class="back-link">← Back to Home</a>
-        <h1>Web & App Development</h1>
-        <p>At DeenFinacials.Co, we don't just write code; we build the digital engines that drive business growth. Your website or app is often the first interaction a client has with your brand—we ensure it's unforgettable.</p>
         
-        <h2>Our Approach</h2>
-        <p>We combine aesthetic excellence with robust backend engineering. Whether you need a high-conversion landing page or a complex SaaS platform, we build systems that are scalable, secure, and fast.</p>
+        <div class="content-card">
+            <h1>Web & App Development</h1>
+            <p class="subtitle">Scalable digital products engineered for growth.</p>
+            
+            <div class="text-block">
+                <p>At DeenFinacials.Co, we don't just write code; we build the digital engines that drive business growth. Your website or app is often the first interaction a client has with your brand—we ensure it's unforgettable.</p>
+            </div>
 
-        <h2>What We Offer</h2>
-        <ul>
-            <li><strong>Frontend Engineering:</strong> Responsive designs using React, Vue, and modern HTML/CSS.</li>
-            <li><strong>Backend Architecture:</strong> Secure server-side solutions with Node.js, Python, and PHP.</li>
-            <li><strong>Full Stack Development:</strong> End-to-end unified systems.</li>
-            <li><strong>Mobile Apps:</strong> Native and Cross-platform applications for iOS and Android.</li>
-        </ul>
+            <h2>What We Build</h2>
+            <ul>
+                <li><strong>Frontend Engineering:</strong> Responsive, high-speed designs using React, Vue, and modern HTML/CSS.</li>
+                <li><strong>Backend Architecture:</strong> Secure server-side solutions with Node.js, Python, and PHP.</li>
+                <li><strong>Full Stack Systems:</strong> End-to-end unified platforms that handle complex data.</li>
+                <li><strong>Mobile Apps:</strong> Native and Cross-platform applications for iOS and Android.</li>
+            </ul>
 
-        <a href="index.html#contact" class="btn">Start Your Project</a>
+            <a href="index.html#contact" class="btn">Start Your Project</a>
+        </div>
     </div>
 </body>
 </html>
