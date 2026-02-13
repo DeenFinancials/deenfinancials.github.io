@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeenFinacials.Co | Digital Command Center</title>
+    <title>DeenFinacials.Co | Innovate. Build. Grow.</title>
     <style>
-        /* --- THEME: CYBER ARCHITECT --- */
+        /* --- THEME: CYBER COMMAND V2 --- */
         :root {
             --bg-deep: #020617;
             --glass-panel: rgba(15, 23, 42, 0.6);
-            --border-color: rgba(56, 189, 248, 0.1);
+            --border-color: rgba(56, 189, 248, 0.15);
             --neon-blue: #00a8ff;
             --text-main: #e2e8f0;
             --text-muted: #94a3b8;
@@ -22,93 +22,144 @@
             font-family: var(--font-display);
             margin: 0;
             padding: 0;
-            /* The Cyber-Grid Background Pattern */
+            /* Cyber Grid Background */
             background-image: 
                 linear-gradient(var(--border-color) 1px, transparent 1px),
                 linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
-            background-size: 40px 40px;
-            background-position: center top;
+            background-size: 50px 50px;
             overflow-x: hidden;
         }
 
-        /* --- INSTANT LOAD NAV --- */
+        /* --- NAV: LOGO OUTSPOKEN --- */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 5%;
+            padding: 15px 5%;
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(2, 6, 23, 0.8);
+            background: rgba(2, 6, 23, 0.7); /* Subtle dark glass */
         }
 
         .logo-container img {
-            height: 50px; /* Fixed height for stability */
+            height: 70px; /* Much bigger */
             width: auto;
-            /* SPEED FIX: This forces the browser to prioritize the logo */
-            aspect-ratio: auto; 
+            display: block;
+            filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.3)); /* Slight glow */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            margin-left: 25px;
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: 0.3s;
+            font-weight: 600;
         }
 
         .nav-links a:hover {
             color: var(--neon-blue);
-            text-shadow: 0 0 8px var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
         }
 
-        /* --- HERO MODULE --- */
+        .cta-button {
+            border: 1px solid var(--neon-blue);
+            padding: 10px 25px;
+            border-radius: 4px;
+            color: var(--neon-blue) !important;
+            transition: 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: var(--neon-blue);
+            color: #000 !important;
+            box-shadow: 0 0 20px rgba(0, 168, 255, 0.4);
+        }
+
+        /* --- HERO SECTION --- */
         .hero-section {
-            padding: 80px 5%;
+            padding: 120px 5%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        h1 span {
+            color: var(--neon-blue);
+            text-shadow: 0 0 30px rgba(0, 168, 255, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* --- MISSION (ABOUT US) --- */
+        .mission-container {
+            padding: 0 5% 80px 5%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mission-panel {
+            background: rgba(2, 6, 23, 0.8);
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 168, 255, 0.05);
+            padding: 60px;
+            border-radius: 20px;
+            max-width: 900px;
             text-align: center;
             position: relative;
         }
 
-        .status-badge {
-            display: inline-block;
-            padding: 5px 15px;
-            border: 1px solid var(--neon-blue);
-            border-radius: 20px;
+        .mission-panel h2 {
             color: var(--neon-blue);
-            font-size: 0.8rem;
-            margin-bottom: 20px;
-            background: rgba(0, 168, 255, 0.05);
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            display: inline-block;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
         }
 
-        h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #fff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
+        .mission-panel p {
             color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 40px auto;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
         }
 
-        /* --- THE BENTO GRID (SERVICES) --- */
+        /* --- SERVICES GRID --- */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+
         .dashboard-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 0 5% 80px 5%;
+            gap: 25px;
+            padding: 0 5% 100px 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -116,41 +167,27 @@
         .panel {
             background: var(--glass-panel);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 30px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 12px;
+            padding: 35px;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 280px;
         }
 
         .panel:hover {
-            transform: translateY(-5px);
+            transform: translateY(-7px);
             border-color: var(--neon-blue);
             box-shadow: 0 10px 40px -10px rgba(0, 168, 255, 0.15);
+            background: rgba(15, 23, 42, 0.8);
         }
-
-        /* Decorative "Tech" lines on cards */
-        .panel::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
-            opacity: 0;
-            transition: 0.3s;
-        }
-        .panel:hover::before { opacity: 1; }
 
         .panel h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-top: 0;
-            margin-bottom: 10px;
             color: #fff;
         }
 
@@ -164,7 +201,6 @@
             text-decoration: none;
             color: inherit;
             display: block;
-            height: 100%;
         }
 
         .arrow-icon {
@@ -172,113 +208,162 @@
             color: var(--neon-blue);
             font-size: 1.5rem;
             margin-top: 20px;
-        }
-
-        /* --- CONTACT BAR --- */
-        .contact-bar {
-            background: #000;
-            border-top: 1px solid var(--border-color);
-            padding: 40px 5%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            text-align: center;
-        }
-
-        .contact-item {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
             transition: 0.3s;
         }
         
-        .contact-item:hover { color: var(--neon-blue); }
+        .panel:hover .arrow-icon { transform: translateX(5px); }
 
+        /* --- CONTACT CARDS (MINI SECTIONS) --- */
+        .contact-section {
+            padding: 50px 5% 100px 5%;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            background: rgba(2, 6, 23, 0.5);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: var(--glass-panel);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            border-color: var(--neon-blue);
+            color: #fff;
+            background: rgba(0, 168, 255, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .contact-card h4 {
+            color: var(--neon-blue);
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-card div { font-size: 2rem; margin-bottom: 10px; }
+        .contact-card span { font-size: 0.9rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Hide links on mobile for simplicity, or add hamburger */
+            .logo-container img { height: 50px; }
+        }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo-container">
-            <img src="logo.png" 
-                 alt="DeenFinacials" 
-                 width="280" 
-                 height="100" 
-                 fetchpriority="high"
-                 decoding="sync"> 
+            <img src="logo.png" alt="DeenFinacials" fetchpriority="high"> 
         </div>
         <div class="nav-links">
-            <a href="#about">Mission</a>
-            <a href="#services">Modules</a>
-            <a href="#contact" style="color: var(--neon-blue);">Start Project_</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="contact.html" class="cta-button">Start Project_</a>
         </div>
     </nav>
 
     <div class="hero-section">
-        <div class="status-badge">● SYSTEM ONLINE</div>
-        <h1>Architecting <br><span style="color:var(--neon-blue)">Digital Empires.</span></h1>
-        <p>DeenFinancials.Co isn't just an agency. We are the architects of your digital automated future. Web. AI. Security.</p>
+        <h1>Innovate. <span>Build.</span> Grow.</h1>
+        <p>Your Tech & Growth Partner. We build unified systems to automate and scale your business.</p>
     </div>
+
+    <div class="mission-container" id="about">
+        <div class="mission-panel">
+            <h2>// SYSTEM ORIGIN</h2>
+            <p>At DeenFinancials.co, we don’t just build websites—we engineer unified digital ecosystems. As digital solution architects, we specialize in bridging the gap between design and functionality, combining full-stack web development, intuitive UI/UX design, and intelligent chatbot automation into a single, seamless workflow.</p>
+            <p style="margin-bottom: 0;">Our mission is to transform how businesses operate by constructing fast, responsive digital foundations and integrating them with smart automation. Whether it is a custom mobile app or a 24/7 AI agent handling your customer inquiries, we build the systems that allow your business to run efficiently and grow effortlessly.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Operational Modules</h2>
 
     <div class="dashboard-grid" id="services">
         
-        <div class="panel" style="grid-column: span 1 / -1;">
-            <div>
-                <h3 style="color:var(--neon-blue)">// THE MISSION</h3>
-                <p>We bridge the gap between human creativity and machine efficiency. Whether it's a trading algorithm that never sleeps or a web ecosystem that scales automatically, we build the engines that power growth.</p>
-            </div>
-        </div>
-
         <a href="web-development.html" class="panel-link">
             <div class="panel">
-                <h3>01. Web Ecosystems</h3>
-                <p>Full-stack development using React & Node.js. Not just websites, but living digital platforms.</p>
+                <div>
+                    <h3>01. Web & App Ecosystems</h3>
+                    <p>Full-cycle development for scalable digital products. Frontend, Backend, and Full Stack Architecture.</p>
+                </div>
                 <div class="arrow-icon">→</div>
             </div>
         </a>
 
         <a href="chatbot-automation.html" class="panel-link">
             <div class="panel">
-                <h3>02. AI Auto-Agents</h3>
-                <p>Chatbots that close sales 24/7. Turn your traffic into revenue while you sleep.</p>
+                <div>
+                    <h3>02. AI Auto-Agents</h3>
+                    <p>Intelligent assistants that work while you sleep. 24/7 Support and Lead Generation.</p>
+                </div>
                 <div class="arrow-icon">→</div>
             </div>
         </a>
 
         <a href="trading-ai.html" class="panel-link">
             <div class="panel">
-                <h3>03. FinTech Algo</h3>
-                <p>Custom trading bots and blockchain wallets secured by military-grade logic.</p>
+                <div>
+                    <h3>03. Trading Bots & AI</h3>
+                    <p>Automated financial tools and secure blockchain solutions. Custom Algorithms and Market Analysis.</p>
+                </div>
                 <div class="arrow-icon">→</div>
             </div>
         </a>
 
         <a href="security.html" class="panel-link">
             <div class="panel">
-                <h3>04. Red Team Security</h3>
-                <p>Offensive security audits. We hack your system before the bad guys do.</p>
+                <div>
+                    <h3>04. Red Team Security</h3>
+                    <p>Proactive security measures. Vulnerability Assessments and Penetration Testing.</p>
+                </div>
                 <div class="arrow-icon">→</div>
             </div>
         </a>
     </div>
 
-    <div class="contact-bar" id="contact">
-        <a href="mailto:deenfinacials@gmail.com" class="contact-item">
-            <span>✉️</span> deenfinacials@gmail.com
-        </a>
-        <a href="https://wa.me/2349138091264" class="contact-item">
-            <span>📱</span> +234 913 809 1264
-        </a>
-        <a href="https://discord.com/users/1101254191202189402" class="contact-item">
-            <span>💬</span> Discord: deenfinance
-        </a>
-        <p style="width: 100%; margin-top: 20px; font-size: 0.8rem; opacity: 0.5;">
-            © 2026 DEENFINANCIALS.CO | SYSTEM VERSION 2.0
-        </p>
+    <div class="contact-section">
+        <h2 class="section-title" style="font-size: 1.5rem; margin-bottom: 30px;">Direct Communication Channels</h2>
+        <div class="contact-grid">
+            
+            <a href="mailto:deenfinacials@gmail.com" class="contact-card">
+                <div>✉️</div>
+                <h4>Email</h4>
+                <span>deenfinacials@gmail.com</span>
+            </a>
+
+            <a href="https://wa.me/2349138091264" class="contact-card">
+                <div>📱</div>
+                <h4>WhatsApp</h4>
+                <span>+234 913 809 1264</span>
+            </a>
+
+            <a href="https://x.com/DeenFinance" class="contact-card">
+                <div>✖️</div>
+                <h4>X (Twitter)</h4>
+                <span>@DeenFinance</span>
+            </a>
+
+            <a href="https://discord.com/users/1101254191202189402" class="contact-card">
+                <div>💬</div>
+                <h4>Discord</h4>
+                <span>deenfinance</span>
+            </a>
+
+        </div>
+        <p style="margin-top: 50px; opacity: 0.5; font-size: 0.8rem;">© 2026 DEENFINANCIALS.CO | ALL RIGHTS RESERVED.</p>
     </div>
 
 </body>
