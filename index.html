@@ -34,7 +34,6 @@
             flex-direction: column; 
             align-items: center;    
             padding: 3rem 5%; 
-            /* Semi-transparent Dark Blue */
             background-color: rgba(2, 12, 27, 0.95);
             backdrop-filter: blur(10px);
             position: sticky;
@@ -71,7 +70,7 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 40px; /* Increased link spacing */
             flex-wrap: wrap; 
             justify-content: center;
         }
@@ -82,7 +81,7 @@
             font-weight: 500;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: color 0.3s;
         }
 
@@ -92,8 +91,8 @@
 
         .btn-nav {
             background-color: var(--primary);
-            color: #020c1b !important; /* Dark text on button */
-            padding: 8px 25px;
+            color: #020c1b !important; 
+            padding: 10px 30px;
             border-radius: 50px; 
             font-weight: bold;
         }
@@ -101,14 +100,13 @@
         /* --- HERO SECTION --- */
         .hero {
             text-align: center;
-            padding: 140px 20px;
-            /* Blue Gradient */
+            padding: 180px 20px; /* Massive spacing for Hero */
             background: radial-gradient(circle at center, #112240 0%, var(--dark-bg) 70%);
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem; /* Larger Title */
+            margin-bottom: 25px;
             letter-spacing: -1px;
         }
 
@@ -117,37 +115,38 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.8;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
+            max-width: 650px;
+            margin: 0 auto 50px auto;
         }
 
         .btn {
             background-color: var(--primary);
             color: #020c1b;
-            padding: 15px 40px;
+            padding: 18px 45px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             transition: 0.3s;
             display: inline-block;
-            box-shadow: 0 0 15px rgba(0, 168, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 168, 255, 0.2);
+            font-size: 1.1rem;
         }
 
         .btn:hover {
             background-color: #fff;
-            box-shadow: 0 0 25px var(--primary);
-            transform: translateY(-2px);
+            box-shadow: 0 0 30px var(--primary);
+            transform: translateY(-3px);
         }
 
         /* --- SECTION TITLES --- */
         h2.section-title {
-            font-size: 2.2rem;
-            margin-bottom: 60px; 
+            font-size: 2.5rem;
+            margin-bottom: 80px; /* Pushed title far away from content */
             border-bottom: 3px solid var(--primary);
             display: inline-block;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             text-align: center;
         }
 
@@ -158,15 +157,14 @@
 
         /* --- ABOUT US --- */
         .about-container {
-            padding: 0 5%;
-            margin-bottom: 100px;
+            padding: 120px 5%; /* Distinct separation */
         }
 
         .about-card {
             max-width: 900px;
             margin: 0 auto;
             background-color: var(--card-bg);
-            padding: 60px;
+            padding: 80px 60px; /* More internal breathing room */
             border-radius: 20px;
             border: var(--border);
             text-align: center;
@@ -174,28 +172,29 @@
         }
 
         .about-card p {
-            font-size: 1.1rem;
-            color: #8892b0; /* Soft Blue-Grey Text */
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #8892b0;
+            margin-bottom: 30px;
+            line-height: 1.8;
         }
 
-        /* --- SERVICES & CONTACT GRIDS --- */
+        /* --- SERVICES & CONTACT WRAPPERS --- */
         .section-wrapper {
-            padding: 50px 5%;
+            padding: 140px 5%; /* Huge spacing between sections */
             text-align: center;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px; 
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 60px; /* Cards pushed far apart */
+            margin-top: 40px;
         }
 
         /* --- DARK BLUE CARD STYLE --- */
         .card {
             background-color: var(--card-bg); 
-            padding: 40px;
+            padding: 50px 40px; /* Larger cards */
             border-radius: 15px;
             border: var(--border);
             transition: all 0.3s ease;
@@ -208,27 +207,28 @@
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-12px);
             border-color: var(--primary);
-            background-color: #112240; /* Slightly lighter on hover */
+            background-color: #112240; 
         }
 
         .card h3 {
             color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
             margin-top: 0;
         }
 
         .card ul {
             padding-left: 20px;
             color: #8892b0;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
         }
 
         .card li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .card-link {
@@ -239,17 +239,17 @@
         }
 
         .contact-info {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: #e6f1ff;
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: 500;
             word-break: break-all;
         }
 
         .sub-text {
-            font-size: 0.85rem; 
+            font-size: 0.9rem; 
             color: #8892b0; 
-            margin-top: 5px;
+            margin-top: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -257,15 +257,15 @@
         /* --- FOOTER --- */
         footer {
             text-align: center;
-            padding: 80px 20px;
-            margin-top: 50px;
+            padding: 100px 20px;
+            margin-top: 80px;
             border-top: 1px solid #1d2d50;
             background-color: #020c1b;
         }
 
         .footer-slogan {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
             color: #8892b0;
         }
 
@@ -280,7 +280,8 @@
     <nav>
         <div class="nav-brand">
             <img src="logo.png" alt="DeenFinacials Logo">
-            </div>
+            <div class="brand-name">DEENFINANCIALS.CO</div> 
+        </div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#services">Services</a>
