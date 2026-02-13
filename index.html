@@ -22,6 +22,10 @@
             line-height: 1.6;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Navigation */
         nav {
             display: flex;
@@ -48,6 +52,25 @@
             height: 50px; 
             border-radius: 50%;
             border: 2px solid var(--primary);
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-nav {
+            background-color: var(--primary);
+            color: #000 !important;
+            padding: 8px 20px;
+            border-radius: 5px;
         }
 
         /* Hero Section */
@@ -81,6 +104,7 @@
             font-weight: bold;
             border-radius: 5px;
             transition: 0.3s;
+            display: inline-block;
         }
 
         .btn:hover {
@@ -88,18 +112,38 @@
             box-shadow: 0 0 15px var(--primary);
         }
 
-        /* Services Section */
-        .services {
-            padding: 80px 5%;
-            text-align: center;
-        }
-
-        .services h2 {
+        /* Section Titles */
+        h2.section-title {
             font-size: 2.5rem;
             margin-bottom: 50px;
             border-bottom: 2px solid var(--primary);
             display: inline-block;
             padding-bottom: 10px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 5%;
+            background-color: #0e121b; 
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.1rem;
+            color: #ccc;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        /* Services & Contact Section */
+        .services, .contact {
+            padding: 80px 5%;
+            text-align: center;
         }
 
         .grid {
@@ -132,14 +176,38 @@
             color: #ccc;
         }
 
+        .contact-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+
+        .contact-info {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-top: 10px;
+            word-break: break-all;
+        }
+
         /* Footer */
         footer {
             background-color: #000;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
             margin-top: 50px;
-            font-size: 0.9rem;
-            opacity: 0.7;
+            border-top: 1px solid #333;
+        }
+
+        .footer-slogan {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .footer-slogan span {
+            color: var(--primary);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -150,19 +218,29 @@
             <img src="logo.png" alt="DeenFinacials Logo"> 
             DEENFINANCIALS.CO
         </div>
-        <div>
-            <a href="mailto:contact@deenfinancials.co" class="btn">Contact Us</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact" class="btn-nav">Contact</a>
         </div>
     </nav>
 
     <section class="hero">
         <h1>Innovate. <span>Build.</span> Grow.</h1>
         <p>Your Tech & Growth Partner. We build unified systems to automate and scale your business.</p>
-        <a href="#services" class="btn">View Services</a>
+        <a href="#contact" class="btn">Get a Quote</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-content">
+            <p>At DeenFinancials.co, we don’t just build websites—we engineer unified digital ecosystems. As digital solution architects, we specialize in bridging the gap between design and functionality, combining full-stack web development, intuitive UI/UX design, and intelligent chatbot automation into a single, seamless workflow.</p>
+            <p>Our mission is to transform how businesses operate by constructing fast, responsive digital foundations and integrating them with smart automation. Whether it is a custom mobile app or a 24/7 AI agent handling your customer inquiries, we build the systems that allow your business to run efficiently and grow effortlessly.</p>
+        </div>
     </section>
 
     <section id="services" class="services">
-        <h2>Our Services</h2>
+        <h2 class="section-title">Our Services</h2>
         <div class="grid">
             
             <div class="card">
@@ -208,7 +286,47 @@
         </div>
     </section>
 
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <a href="mailto:deenfinacials@gmail.com" class="contact-link">
+                    <h3>📧 Email & Google Meet</h3>
+                    <p class="contact-info">deenfinacials@gmail.com</p>
+                    <p style="font-size:0.8rem; color:#888; margin-top:5px;">Click to Send Mail</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://wa.me/2349138091264" class="contact-link" target="_blank">
+                    <h3>📱 WhatsApp</h3>
+                    <p class="contact-info">+234 913 809 1264</p>
+                    <p style="font-size:0.8rem; color:#888; margin-top:5px;">Click to Chat</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="https://x.com/DeenFinance" class="contact-link" target="_blank">
+                    <h3>✖️ X (Twitter)</h3>
+                    <p class="contact-info">@DeenFinance</p>
+                    <p style="font-size:0.8rem; color:#888; margin-top:5px;">Click to Follow</p>
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>💬 Discord</h3>
+                <p class="contact-info">deenfinance</p>
+                <p style="font-size:0.8rem; color:#888; margin-top:5px;">Add us on Discord</p>
+            </div>
+
+        </div>
+    </section>
+
     <footer>
+        <div class="footer-slogan">
+            <span>Innovate, Build, Grow</span> | Your Tech and Growth Partner
+        </div>
         <p>&copy; 2026 DeenFinacials.Co. All rights reserved.</p>
     </footer>
 
