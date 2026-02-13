@@ -8,8 +8,8 @@
         /* --- CSS STYLES --- */
         :root {
             --primary: #00a8ff; 
-            --dark-bg: #0a0e17; 
-            --card-bg: #151b29;
+            --dark-bg: #050505; /* Pitch black for the main background */
+            --section-bg: #0f141f; /* Slightly lighter for the sections */
             --text-light: #f0f0f0;
         }
 
@@ -31,8 +31,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
-            background-color: rgba(10, 14, 23, 0.95);
+            padding: 1rem 5%;
+            background-color: rgba(15, 20, 31, 0.95); /* Matches section bg */
             position: sticky;
             top: 0;
             border-bottom: 1px solid #333;
@@ -49,7 +49,7 @@
         }
 
         .nav-brand img {
-            height: 50px; 
+            height: 40px; /* Slightly smaller logo */
             border-radius: 50%;
             border: 2px solid var(--primary);
         }
@@ -73,17 +73,25 @@
             border-radius: 5px;
         }
 
-        /* Hero Section - MASSIVE SPACING ADDED */
+        /* --- THE NEW "FLOATING" SECTION STYLE --- */
+        section {
+            background-color: var(--section-bg);
+            margin: 40px 5%; /* Adds space OUTSIDE the sections (top/bottom/left/right) */
+            padding: 60px 30px; /* Reduced internal size (from 160px to 60px) */
+            border-radius: 20px; /* Makes them look like separate cards */
+            border: 1px solid #222; /* Subtle border to define the edge */
+        }
+
+        /* Hero Section Specifics */
         .hero {
             text-align: center;
-            padding: 160px 20px; /* Big top/bottom padding */
-            background: radial-gradient(circle at center, #1a253a 0%, var(--dark-bg) 70%);
-            margin-bottom: 50px;
+            /* Gradient overlay on the section background */
+            background: radial-gradient(circle at center, #1a253a 0%, var(--section-bg) 70%);
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem; /* Slightly reduced for better mobile fit */
+            margin-bottom: 15px;
         }
 
         .hero span {
@@ -91,10 +99,10 @@
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             opacity: 0.8;
             max-width: 600px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 30px auto;
         }
 
         .btn {
@@ -115,71 +123,65 @@
 
         /* Section Titles */
         h2.section-title {
-            font-size: 2.5rem;
-            margin-bottom: 80px; /* Pushed title far above cards */
+            font-size: 2rem;
+            margin-bottom: 40px; 
             border-bottom: 2px solid var(--primary);
             display: inline-block;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
+            text-align: center;
+            width: 100%; /* Ensures title is centered properly */
         }
 
         /* About Section */
-        .about {
-            padding: 140px 5%; /* Huge spacing */
-            background-color: #0e121b; 
-            text-align: center;
-        }
-
         .about-content {
             max-width: 800px;
             margin: 0 auto;
-            text-align: left;
-            font-size: 1.1rem;
+            text-align: center; /* Centered text looks cleaner in cards */
+            font-size: 1rem;
             color: #ccc;
         }
 
         .about-content p {
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        /* Services & Contact Section */
-        .services, .contact {
-            padding: 140px 5%; /* Huge spacing between sections */
-            text-align: center;
-        }
-
+        /* Services & Contact Layout */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 60px; /* Cards are pushed far apart */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; /* Gap between the inner service cards */
         }
 
+        /* Inner Cards (Services/Contact) */
         .card {
-            background-color: var(--card-bg);
-            padding: 40px;
+            background-color: #0a0e17; /* Darker than the section to stand out */
+            padding: 25px;
             border-radius: 10px;
             border: 1px solid #333;
             transition: transform 0.3s ease;
-            height: 100%; 
+            height: 100%;
+            text-align: left; /* Keep card text left-aligned for readability */
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             border-color: var(--primary);
         }
 
         .card h3 {
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
         }
 
         .card ul {
-            text-align: left;
             padding-left: 20px;
             color: #ccc;
+            font-size: 0.9rem;
         }
 
         .card li {
-            margin-bottom: 10px; 
+            margin-bottom: 8px;
         }
 
         .contact-link {
@@ -190,24 +192,24 @@
         }
 
         .contact-info {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #ccc;
-            margin-top: 15px;
+            margin-top: 10px;
             word-break: break-all;
         }
 
         /* Footer */
         footer {
-            background-color: #000;
             text-align: center;
-            padding: 80px 20px; /* Bigger footer */
-            margin-top: 50px;
-            border-top: 1px solid #333;
+            padding: 40px 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
         }
 
         .footer-slogan {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
             color: #ccc;
         }
 
@@ -245,7 +247,7 @@
         </div>
     </section>
 
-    <section id="services" class="services">
+    <section id="services">
         <h2 class="section-title">Our Services</h2>
         <div class="grid">
             
@@ -292,7 +294,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact">
         <h2 class="section-title">Contact Us</h2>
         <div class="grid">
             
