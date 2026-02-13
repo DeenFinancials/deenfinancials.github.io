@@ -32,7 +32,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 5%;
-            background-color: rgba(15, 20, 31, 0.95); /* Matches section bg */
+            background-color: rgba(15, 20, 31, 0.95);
             position: sticky;
             top: 0;
             border-bottom: 1px solid #333;
@@ -49,7 +49,7 @@
         }
 
         .nav-brand img {
-            height: 40px; /* Slightly smaller logo */
+            height: 40px; 
             border-radius: 50%;
             border: 2px solid var(--primary);
         }
@@ -76,21 +76,20 @@
         /* --- THE NEW "FLOATING" SECTION STYLE --- */
         section {
             background-color: var(--section-bg);
-            margin: 40px 5%; /* Adds space OUTSIDE the sections (top/bottom/left/right) */
-            padding: 60px 30px; /* Reduced internal size (from 160px to 60px) */
-            border-radius: 20px; /* Makes them look like separate cards */
-            border: 1px solid #222; /* Subtle border to define the edge */
+            margin: 40px 5%; /* Adds space OUTSIDE the sections */
+            padding: 60px 30px; /* Internal size */
+            border-radius: 20px; /* Floating card look */
+            border: 1px solid #222; 
         }
 
-        /* Hero Section Specifics */
+        /* Hero Section */
         .hero {
             text-align: center;
-            /* Gradient overlay on the section background */
             background: radial-gradient(circle at center, #1a253a 0%, var(--section-bg) 70%);
         }
 
         .hero h1 {
-            font-size: 2.5rem; /* Slightly reduced for better mobile fit */
+            font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
@@ -129,14 +128,14 @@
             display: inline-block;
             padding-bottom: 10px;
             text-align: center;
-            width: 100%; /* Ensures title is centered properly */
+            width: 100%;
         }
 
         /* About Section */
         .about-content {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center; /* Centered text looks cleaner in cards */
+            text-align: center;
             font-size: 1rem;
             color: #ccc;
         }
@@ -145,22 +144,22 @@
             margin-bottom: 20px;
         }
 
-        /* Services & Contact Layout */
+        /* Grid Layout */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px; /* Gap between the inner service cards */
+            gap: 30px; 
         }
 
-        /* Inner Cards (Services/Contact) */
+        /* Inner Cards */
         .card {
-            background-color: #0a0e17; /* Darker than the section to stand out */
+            background-color: #0a0e17; 
             padding: 25px;
             border-radius: 10px;
             border: 1px solid #333;
             transition: transform 0.3s ease;
             height: 100%;
-            text-align: left; /* Keep card text left-aligned for readability */
+            text-align: left; 
         }
 
         .card:hover {
@@ -182,6 +181,14 @@
 
         .card li {
             margin-bottom: 8px;
+        }
+
+        /* Make the card clickable */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
         }
 
         .contact-link {
@@ -251,45 +258,53 @@
         <h2 class="section-title">Our Services</h2>
         <div class="grid">
             
-            <div class="card">
-                <h3>💻 Web & App Development</h3>
-                <p>Full-cycle development for scalable digital products.</p>
-                <ul>
-                    <li>Frontend (React, Vue, HTML/CSS)</li>
-                    <li>Backend (Node.js, Python, PHP)</li>
-                    <li>Full Stack Architecture</li>
-                </ul>
-            </div>
+            <a href="web-development.html" class="card-link">
+                <div class="card">
+                    <h3>💻 Web & App Development</h3>
+                    <p>Full-cycle development for scalable digital products.</p>
+                    <ul>
+                        <li>Frontend (React, Vue, HTML/CSS)</li>
+                        <li>Backend (Node.js, Python, PHP)</li>
+                        <li>Full Stack Architecture</li>
+                    </ul>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3>🤖 Chatbot Automation</h3>
-                <p>Intelligent assistants that work while you sleep.</p>
-                <ul>
-                    <li>24/7 Customer Support Bots</li>
-                    <li>Lead Generation Automation</li>
-                    <li>Business Workflow Integration</li>
-                </ul>
-            </div>
+            <a href="chatbot-automation.html" class="card-link">
+                <div class="card">
+                    <h3>🤖 Chatbot Automation</h3>
+                    <p>Intelligent assistants that work while you sleep.</p>
+                    <ul>
+                        <li>24/7 Customer Support Bots</li>
+                        <li>Lead Generation Automation</li>
+                        <li>Business Workflow Integration</li>
+                    </ul>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3>📈 Trading Bots & AI</h3>
-                <p>Automated financial tools and secure blockchain solutions.</p>
-                <ul>
-                    <li>Custom Trading Algorithms</li>
-                    <li>AI-Powered Market Analysis</li>
-                    <li>Secure Crypto Wallet Dev</li>
-                </ul>
-            </div>
+            <a href="trading-ai.html" class="card-link">
+                <div class="card">
+                    <h3>📈 Trading Bots & AI</h3>
+                    <p>Automated financial tools and secure blockchain solutions.</p>
+                    <ul>
+                        <li>Custom Trading Algorithms</li>
+                        <li>AI-Powered Market Analysis</li>
+                        <li>Secure Crypto Wallet Dev</li>
+                    </ul>
+                </div>
+            </a>
 
-            <div class="card">
-                <h3>🔒 Ethical Hacking & Security</h3>
-                <p>Proactive security measures to protect your assets.</p>
-                <ul>
-                    <li>Vulnerability Assessments</li>
-                    <li>Penetration Testing</li>
-                    <li>Security Audits</li>
-                </ul>
-            </div>
+            <a href="security.html" class="card-link">
+                <div class="card">
+                    <h3>🔒 Ethical Hacking & Security</h3>
+                    <p>Proactive security measures to protect your assets.</p>
+                    <ul>
+                        <li>Vulnerability Assessments</li>
+                        <li>Penetration Testing</li>
+                        <li>Security Audits</li>
+                    </ul>
+                </div>
+            </a>
 
         </div>
     </section>
