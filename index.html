@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeenFinacials.Co | Tech & Growth Partner</title>
     <style>
-        /* --- PREMIUM DARK THEME VARIABLES --- */
+        /* --- PREMIUM DARK BLUE THEME --- */
         :root {
             --primary: #00a8ff; 
-            --dark-bg: #050505; /* Deep Black */
-            --card-bg: #0f141f; /* Dark Blue-Grey */
-            --text-light: #f0f0f0;
-            --shadow: 0 10px 30px rgba(0,0,0,0.5);
-            --border: 1px solid #222;
+            --dark-bg: #020c1b; /* Deep Midnight Blue */
+            --card-bg: #0a192f; /* Lighter Navy Blue for cards */
+            --text-light: #e6f1ff; /* White with a very slight blue tint */
+            --shadow: 0 10px 30px rgba(2, 12, 27, 0.7);
+            --border: 1px solid #1d2d50; /* Subtle blue border */
         }
 
         body {
@@ -28,17 +28,18 @@
             scroll-behavior: smooth;
         }
 
-        /* --- NAVIGATION (LONELY AT TOP + LARGE LOGO) --- */
+        /* --- NAVIGATION --- */
         nav {
             display: flex;
             flex-direction: column; 
             align-items: center;    
-            padding: 3rem 5%; /* Extra spacing for the big logo */
-            background-color: rgba(5, 5, 5, 0.95);
+            padding: 3rem 5%; 
+            /* Semi-transparent Dark Blue */
+            background-color: rgba(2, 12, 27, 0.95);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid #1d2d50;
             z-index: 1000;
         }
 
@@ -51,9 +52,8 @@
         }
 
         .nav-brand img {
-            /* MASSIVE LOGO SIZE */
-            width: 280px;  /* Increased size */
-            max-width: 90%; /* Safety for small phones */
+            width: 280px;  
+            max-width: 90%; 
             height: auto; 
             object-fit: contain; 
             border: none;
@@ -72,7 +72,7 @@
         .nav-links {
             display: flex;
             gap: 30px;
-            flex-wrap: wrap; /* Wraps links on very small screens */
+            flex-wrap: wrap; 
             justify-content: center;
         }
 
@@ -92,7 +92,7 @@
 
         .btn-nav {
             background-color: var(--primary);
-            color: #000 !important;
+            color: #020c1b !important; /* Dark text on button */
             padding: 8px 25px;
             border-radius: 50px; 
             font-weight: bold;
@@ -102,7 +102,8 @@
         .hero {
             text-align: center;
             padding: 140px 20px;
-            background: radial-gradient(circle at center, #131b2e 0%, var(--dark-bg) 70%);
+            /* Blue Gradient */
+            background: radial-gradient(circle at center, #112240 0%, var(--dark-bg) 70%);
         }
 
         .hero h1 {
@@ -124,14 +125,14 @@
 
         .btn {
             background-color: var(--primary);
-            color: #000;
+            color: #020c1b;
             padding: 15px 40px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             transition: 0.3s;
             display: inline-block;
-            box-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
+            box-shadow: 0 0 15px rgba(0, 168, 255, 0.2);
         }
 
         .btn:hover {
@@ -174,7 +175,7 @@
 
         .about-card p {
             font-size: 1.1rem;
-            color: #ccc;
+            color: #8892b0; /* Soft Blue-Grey Text */
             margin-bottom: 20px;
         }
 
@@ -191,7 +192,7 @@
             margin-top: 20px;
         }
 
-        /* --- DARK CARD STYLE --- */
+        /* --- DARK BLUE CARD STYLE --- */
         .card {
             background-color: var(--card-bg); 
             padding: 40px;
@@ -200,7 +201,7 @@
             transition: all 0.3s ease;
             height: 100%;
             text-align: left; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px -10px rgba(2,12,27,0.7);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -209,7 +210,7 @@
         .card:hover {
             transform: translateY(-10px);
             border-color: var(--primary);
-            box-shadow: var(--shadow);
+            background-color: #112240; /* Slightly lighter on hover */
         }
 
         .card h3 {
@@ -221,7 +222,7 @@
 
         .card ul {
             padding-left: 20px;
-            color: #ccc;
+            color: #8892b0;
             font-size: 0.95rem;
             margin-bottom: 20px;
         }
@@ -239,7 +240,7 @@
 
         .contact-info {
             font-size: 1.1rem;
-            color: #fff;
+            color: #e6f1ff;
             margin-top: 10px;
             font-weight: 500;
             word-break: break-all;
@@ -247,7 +248,7 @@
 
         .sub-text {
             font-size: 0.85rem; 
-            color: #666; 
+            color: #8892b0; 
             margin-top: 5px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -258,14 +259,14 @@
             text-align: center;
             padding: 80px 20px;
             margin-top: 50px;
-            border-top: 1px solid #222;
-            background-color: #000;
+            border-top: 1px solid #1d2d50;
+            background-color: #020c1b;
         }
 
         .footer-slogan {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: #888;
+            color: #8892b0;
         }
 
         .footer-slogan span {
@@ -279,8 +280,7 @@
     <nav>
         <div class="nav-brand">
             <img src="logo.png" alt="DeenFinacials Logo">
-            <div class="brand-name">DEENFINANCIALS.CO</div>
-        </div>
+            </div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#services">Services</a>
@@ -312,7 +312,7 @@
                 <div class="card">
                     <div>
                         <h3>💻 Web & App Development</h3>
-                        <p style="color:#888; margin-bottom:15px;">Full-cycle development for scalable digital products.</p>
+                        <p style="color:#8892b0; margin-bottom:15px;">Full-cycle development for scalable digital products.</p>
                         <ul>
                             <li>Frontend (React, Vue, HTML/CSS)</li>
                             <li>Backend (Node.js, Python, PHP)</li>
@@ -327,7 +327,7 @@
                 <div class="card">
                     <div>
                         <h3>🤖 Chatbot Automation</h3>
-                        <p style="color:#888; margin-bottom:15px;">Intelligent assistants that work while you sleep.</p>
+                        <p style="color:#8892b0; margin-bottom:15px;">Intelligent assistants that work while you sleep.</p>
                         <ul>
                             <li>24/7 Customer Support Bots</li>
                             <li>Lead Generation Automation</li>
@@ -342,7 +342,7 @@
                 <div class="card">
                     <div>
                         <h3>📈 Trading Bots & AI</h3>
-                        <p style="color:#888; margin-bottom:15px;">Automated financial tools and secure blockchain solutions.</p>
+                        <p style="color:#8892b0; margin-bottom:15px;">Automated financial tools and secure blockchain solutions.</p>
                         <ul>
                             <li>Custom Trading Algorithms</li>
                             <li>AI-Powered Market Analysis</li>
@@ -357,7 +357,7 @@
                 <div class="card">
                     <div>
                         <h3>🔒 Ethical Hacking & Security</h3>
-                        <p style="color:#888; margin-bottom:15px;">Proactive security measures to protect your assets.</p>
+                        <p style="color:#8892b0; margin-bottom:15px;">Proactive security measures to protect your assets.</p>
                         <ul>
                             <li>Vulnerability Assessments</li>
                             <li>Penetration Testing</li>
@@ -414,8 +414,8 @@
         <div class="footer-slogan">
             <span>Innovate, Build, Grow</span> | Your Tech and Growth Partner
         </div>
-        <p style="color: #444;">&copy; 2026 DeenFinacials.Co. All rights reserved.</p>
+        <p style="color: #8892b0;">&copy; 2026 DeenFinacials.Co. All rights reserved.</p>
     </footer>
 
 </body>
-    </html>
+</html>
