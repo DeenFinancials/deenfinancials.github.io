@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeenFinacials.Co | Tech & Growth Partner</title>
     <style>
-        /* --- PREMIUM CSS VARIABLES --- */
+        /* --- NEW LIGHT THEME CSS VARIABLES --- */
         :root {
-            --primary: #00a8ff; 
-            --dark-bg: #050505; 
-            --card-bg: #0f141f; 
-            --text-light: #f0f0f0;
-            --shadow: 0 10px 30px rgba(0,0,0,0.5);
-            --border: 1px solid #222;
+            --primary: #00a8ff; /* Keep the brand blue */
+            --bg-color: #ffffff; /* Pure White Background */
+            --card-bg: #f8f9fa; /* Very Light Gray for cards */
+            --text-dark: #333333; /* Dark charcoal text for readability */
+            --text-muted: #666666; /* A lighter gray for secondary text */
+            --shadow: 0 10px 30px rgba(0,0,0,0.1); /* Softer shadow for light mode */
+            --border: 1px solid #e0e0e0; /* Light gray border */
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
+            background-color: var(--bg-color);
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
@@ -28,39 +29,38 @@
             scroll-behavior: smooth;
         }
 
-        /* --- NAVIGATION (UPDATED LAYOUT) --- */
+        /* --- NAVIGATION (UPDATED FOR WHITE BG) --- */
         nav {
             display: flex;
             flex-direction: column; 
             align-items: center;    
-            padding: 2rem 5%; /* More top padding for the "lonely" look */
-            background-color: rgba(5, 5, 5, 0.95);
+            padding: 2rem 5%;
+            background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
-            border-bottom: 1px solid #222;
+            border-bottom: var(--border);
             z-index: 1000;
         }
 
         .nav-brand {
             display: flex;
-            flex-direction: column; /* Stacks Logo on top of Text */
+            flex-direction: column;
             align-items: center;
             gap: 15px;
-            margin-bottom: 25px; /* Space between brand and links */
+            margin-bottom: 25px;
         }
 
         .nav-brand img {
-            width: 120px; /* Slightly larger for impact */
+            /* INCREASED LOGO SIZE */
+            width: 250px; 
             height: auto; 
             object-fit: contain; 
-            /* REMOVED BORDERS AND PADDING */
             border: none;
             padding: 0;
             display: block;
         }
 
-        /* The Brand Name Text */
         .brand-name {
             font-size: 1.4rem;
             font-weight: bold;
@@ -75,7 +75,7 @@
         }
 
         .nav-links a {
-            color: var(--text-light);
+            color: var(--text-dark);
             text-decoration: none;
             font-weight: 500;
             text-transform: uppercase;
@@ -90,7 +90,7 @@
 
         .btn-nav {
             background-color: var(--primary);
-            color: #000 !important;
+            color: #ffffff !important;
             padding: 8px 25px;
             border-radius: 50px; 
             font-weight: bold;
@@ -100,13 +100,15 @@
         .hero {
             text-align: center;
             padding: 140px 20px;
-            background: radial-gradient(circle at center, #131b2e 0%, var(--dark-bg) 70%);
+            /* Light, subtle gradient */
+            background: radial-gradient(circle at center, #f0f8ff 0%, var(--bg-color) 70%);
         }
 
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
             letter-spacing: -1px;
+            color: var(--text-dark);
         }
 
         .hero span {
@@ -115,26 +117,26 @@
 
         .hero p {
             font-size: 1.2rem;
-            opacity: 0.8;
+            color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto 40px auto;
         }
 
         .btn {
             background-color: var(--primary);
-            color: #000;
+            color: #ffffff;
             padding: 15px 40px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             transition: 0.3s;
             display: inline-block;
-            box-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
         }
 
         .btn:hover {
-            background-color: #fff;
-            box-shadow: 0 0 25px var(--primary);
+            background-color: #008ecc; /* Slightly darker blue on hover */
+            box-shadow: 0 6px 20px rgba(0, 168, 255, 0.4);
             transform: translateY(-2px);
         }
 
@@ -146,6 +148,7 @@
             display: inline-block;
             padding-bottom: 10px;
             text-align: center;
+            color: var(--text-dark);
         }
 
         .center-wrapper {
@@ -172,7 +175,7 @@
 
         .about-card p {
             font-size: 1.1rem;
-            color: #ccc;
+            color: var(--text-muted);
             margin-bottom: 20px;
         }
 
@@ -189,7 +192,7 @@
             margin-top: 20px;
         }
 
-        /* --- THE PREMIUM CARD STYLE --- */
+        /* --- THE PREMIUM CARD STYLE (LIGHT THEME) --- */
         .card {
             background-color: var(--card-bg); 
             padding: 40px;
@@ -198,7 +201,7 @@
             transition: all 0.3s ease;
             height: 100%;
             text-align: left; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -219,7 +222,7 @@
 
         .card ul {
             padding-left: 20px;
-            color: #ccc;
+            color: var(--text-muted);
             font-size: 0.95rem;
             margin-bottom: 20px;
         }
@@ -239,7 +242,7 @@
         /* Contact Specifics */
         .contact-info {
             font-size: 1.1rem;
-            color: #fff;
+            color: var(--text-dark);
             margin-top: 10px;
             font-weight: 500;
             word-break: break-all;
@@ -247,7 +250,7 @@
 
         .sub-text {
             font-size: 0.85rem; 
-            color: #666; 
+            color: var(--text-muted); 
             margin-top: 5px;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -258,14 +261,14 @@
             text-align: center;
             padding: 80px 20px;
             margin-top: 50px;
-            border-top: 1px solid #222;
-            background-color: #000;
+            border-top: var(--border);
+            background-color: #f0f0f0; /* Light gray footer */
         }
 
         .footer-slogan {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: #888;
+            color: var(--text-muted);
         }
 
         .footer-slogan span {
@@ -312,7 +315,7 @@
                 <div class="card">
                     <div>
                         <h3>💻 Web & App Development</h3>
-                        <p style="color:#888; margin-bottom:15px;">Full-cycle development for scalable digital products.</p>
+                        <p style="color:var(--text-muted); margin-bottom:15px;">Full-cycle development for scalable digital products.</p>
                         <ul>
                             <li>Frontend (React, Vue, HTML/CSS)</li>
                             <li>Backend (Node.js, Python, PHP)</li>
@@ -327,7 +330,7 @@
                 <div class="card">
                     <div>
                         <h3>🤖 Chatbot Automation</h3>
-                        <p style="color:#888; margin-bottom:15px;">Intelligent assistants that work while you sleep.</p>
+                        <p style="color:var(--text-muted); margin-bottom:15px;">Intelligent assistants that work while you sleep.</p>
                         <ul>
                             <li>24/7 Customer Support Bots</li>
                             <li>Lead Generation Automation</li>
@@ -342,7 +345,7 @@
                 <div class="card">
                     <div>
                         <h3>📈 Trading Bots & AI</h3>
-                        <p style="color:#888; margin-bottom:15px;">Automated financial tools and secure blockchain solutions.</p>
+                        <p style="color:var(--text-muted); margin-bottom:15px;">Automated financial tools and secure blockchain solutions.</p>
                         <ul>
                             <li>Custom Trading Algorithms</li>
                             <li>AI-Powered Market Analysis</li>
@@ -357,7 +360,7 @@
                 <div class="card">
                     <div>
                         <h3>🔒 Ethical Hacking & Security</h3>
-                        <p style="color:#888; margin-bottom:15px;">Proactive security measures to protect your assets.</p>
+                        <p style="color:var(--text-muted); margin-bottom:15px;">Proactive security measures to protect your assets.</p>
                         <ul>
                             <li>Vulnerability Assessments</li>
                             <li>Penetration Testing</li>
@@ -414,7 +417,7 @@
         <div class="footer-slogan">
             <span>Innovate, Build, Grow</span> | Your Tech and Growth Partner
         </div>
-        <p style="color: #444;">&copy; 2026 DeenFinacials.Co. All rights reserved.</p>
+        <p style="color: var(--text-muted);">&copy; 2026 DeenFinacials.Co. All rights reserved.</p>
     </footer>
 
 </body>
