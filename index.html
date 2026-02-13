@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeenFinacials.Co | Tech & Growth Partner</title>
     <style>
-        /* --- CSS STYLES --- */
+        /* --- PREMIUM CSS VARIABLES --- */
         :root {
             --primary: #00a8ff; 
-            --dark-bg: #050505; /* Pitch black for the main background */
-            --section-bg: #0f141f; /* Slightly lighter for the sections */
+            --dark-bg: #050505; /* Deepest Black */
+            --card-bg: #0f141f; /* Premium Dark Blue-Grey */
             --text-light: #f0f0f0;
+            --shadow: 0 10px 30px rgba(0,0,0,0.5); /* The "Pop" Effect */
+            --border: 1px solid #222;
         }
 
         body {
@@ -26,16 +28,17 @@
             scroll-behavior: smooth;
         }
 
-        /* Navigation */
+        /* --- NAVIGATION --- */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 5%;
-            background-color: rgba(15, 20, 31, 0.95);
+            background-color: rgba(5, 5, 5, 0.9); /* Semi-transparent */
+            backdrop-filter: blur(10px); /* Glass blur effect */
             position: sticky;
             top: 0;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #222;
             z-index: 1000;
         }
 
@@ -71,26 +74,21 @@
             color: #000 !important;
             padding: 8px 20px;
             border-radius: 5px;
+            font-weight: bold;
         }
 
-        /* --- THE NEW "FLOATING" SECTION STYLE --- */
-        section {
-            background-color: var(--section-bg);
-            margin: 40px 5%; /* Adds space OUTSIDE the sections */
-            padding: 60px 30px; /* Internal size */
-            border-radius: 20px; /* Floating card look */
-            border: 1px solid #222; 
-        }
-
-        /* Hero Section */
+        /* --- HERO SECTION --- */
         .hero {
             text-align: center;
-            background: radial-gradient(circle at center, #1a253a 0%, var(--section-bg) 70%);
+            padding: 140px 20px;
+            /* Subtle radial gradient */
+            background: radial-gradient(circle at center, #131b2e 0%, var(--dark-bg) 70%);
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
         }
 
         .hero span {
@@ -98,92 +96,121 @@
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             opacity: 0.8;
             max-width: 600px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 40px auto;
         }
 
         .btn {
             background-color: var(--primary);
             color: #000;
-            padding: 12px 30px;
+            padding: 15px 40px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
             transition: 0.3s;
             display: inline-block;
+            box-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
         }
 
         .btn:hover {
             background-color: #fff;
-            box-shadow: 0 0 15px var(--primary);
+            box-shadow: 0 0 25px var(--primary);
+            transform: translateY(-2px);
         }
 
-        /* Section Titles */
+        /* --- SECTION TITLES --- */
         h2.section-title {
-            font-size: 2rem;
-            margin-bottom: 40px; 
-            border-bottom: 2px solid var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 60px; 
+            border-bottom: 3px solid var(--primary);
             display: inline-block;
             padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .center-wrapper {
             text-align: center;
             width: 100%;
         }
 
-        /* About Section */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1rem;
-            color: #ccc;
+        /* --- ABOUT US (PREMIUM CARD) --- */
+        .about-container {
+            padding: 0 5%;
+            margin-bottom: 100px;
         }
 
-        .about-content p {
+        .about-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 60px;
+            border-radius: 20px;
+            border: var(--border);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .about-card p {
+            font-size: 1.1rem;
+            color: #ccc;
             margin-bottom: 20px;
         }
 
-        /* Grid Layout */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px; 
+        /* --- SERVICES & CONTACT GRIDS --- */
+        .section-wrapper {
+            padding: 50px 5%;
+            text-align: center;
         }
 
-        /* Inner Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px; 
+            margin-top: 20px;
+        }
+
+        /* --- THE PREMIUM CARD STYLE --- */
         .card {
-            background-color: #0a0e17; 
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #333;
-            transition: transform 0.3s ease;
+            background-color: var(--card-bg); 
+            padding: 40px;
+            border-radius: 15px;
+            border: var(--border);
+            transition: all 0.3s ease;
             height: 100%;
             text-align: left; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             border-color: var(--primary);
+            box-shadow: var(--shadow);
         }
 
         .card h3 {
             color: var(--primary);
             margin-bottom: 15px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            margin-top: 0;
         }
 
         .card ul {
             padding-left: 20px;
             color: #ccc;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
         }
 
         .card li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        /* Make the card clickable */
+        /* Clickable Area */
         .card-link {
             text-decoration: none;
             color: inherit;
@@ -191,33 +218,36 @@
             height: 100%;
         }
 
-        .contact-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            height: 100%;
-        }
-
+        /* Contact Specifics */
         .contact-info {
-            font-size: 1rem;
-            color: #ccc;
+            font-size: 1.1rem;
+            color: #fff;
             margin-top: 10px;
+            font-weight: 500;
             word-break: break-all;
         }
 
-        /* Footer */
+        .sub-text {
+            font-size: 0.85rem; 
+            color: #666; 
+            margin-top: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- FOOTER --- */
         footer {
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 20px;
-            font-size: 0.9rem;
-            opacity: 0.7;
+            padding: 80px 20px;
+            margin-top: 50px;
+            border-top: 1px solid #222;
+            background-color: #000;
         }
 
         .footer-slogan {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #ccc;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #888;
         }
 
         .footer-slogan span {
@@ -246,114 +276,128 @@
         <a href="#contact" class="btn">Get a Quote</a>
     </section>
 
-    <section id="about" class="about">
-        <h2 class="section-title">About Us</h2>
-        <div class="about-content">
-            <p>At DeenFinancials.co, we don’t just build websites—we engineer unified digital ecosystems. As digital solution architects, we specialize in bridging the gap between design and functionality, combining full-stack web development, intuitive UI/UX design, and intelligent chatbot automation into a single, seamless workflow.</p>
-            <p>Our mission is to transform how businesses operate by constructing fast, responsive digital foundations and integrating them with smart automation. Whether it is a custom mobile app or a 24/7 AI agent handling your customer inquiries, we build the systems that allow your business to run efficiently and grow effortlessly.</p>
+    <div id="about" class="about-container">
+        <div class="center-wrapper">
+            <h2 class="section-title">About Us</h2>
         </div>
-    </section>
+        <div class="about-card">
+            <p>At DeenFinancials.co, we don’t just build websites—we engineer unified digital ecosystems. As digital solution architects, we specialize in bridging the gap between design and functionality, combining full-stack web development, intuitive UI/UX design, and intelligent chatbot automation into a single, seamless workflow.</p>
+            <p style="margin-bottom: 0;">Our mission is to transform how businesses operate by constructing fast, responsive digital foundations and integrating them with smart automation. Whether it is a custom mobile app or a 24/7 AI agent handling your customer inquiries, we build the systems that allow your business to run efficiently and grow effortlessly.</p>
+        </div>
+    </div>
 
-    <section id="services">
+    <div id="services" class="section-wrapper">
         <h2 class="section-title">Our Services</h2>
         <div class="grid">
             
             <a href="web-development.html" class="card-link">
                 <div class="card">
-                    <h3>💻 Web & App Development</h3>
-                    <p>Full-cycle development for scalable digital products.</p>
-                    <ul>
-                        <li>Frontend (React, Vue, HTML/CSS)</li>
-                        <li>Backend (Node.js, Python, PHP)</li>
-                        <li>Full Stack Architecture</li>
-                    </ul>
+                    <div>
+                        <h3>💻 Web & App Development</h3>
+                        <p style="color:#888; margin-bottom:15px;">Full-cycle development for scalable digital products.</p>
+                        <ul>
+                            <li>Frontend (React, Vue, HTML/CSS)</li>
+                            <li>Backend (Node.js, Python, PHP)</li>
+                            <li>Full Stack Architecture</li>
+                        </ul>
+                    </div>
+                    <span style="color:var(--primary); font-size:0.9rem;">Learn More →</span>
                 </div>
             </a>
 
             <a href="chatbot-automation.html" class="card-link">
                 <div class="card">
-                    <h3>🤖 Chatbot Automation</h3>
-                    <p>Intelligent assistants that work while you sleep.</p>
-                    <ul>
-                        <li>24/7 Customer Support Bots</li>
-                        <li>Lead Generation Automation</li>
-                        <li>Business Workflow Integration</li>
-                    </ul>
+                    <div>
+                        <h3>🤖 Chatbot Automation</h3>
+                        <p style="color:#888; margin-bottom:15px;">Intelligent assistants that work while you sleep.</p>
+                        <ul>
+                            <li>24/7 Customer Support Bots</li>
+                            <li>Lead Generation Automation</li>
+                            <li>Business Workflow Integration</li>
+                        </ul>
+                    </div>
+                    <span style="color:var(--primary); font-size:0.9rem;">Learn More →</span>
                 </div>
             </a>
 
             <a href="trading-ai.html" class="card-link">
                 <div class="card">
-                    <h3>📈 Trading Bots & AI</h3>
-                    <p>Automated financial tools and secure blockchain solutions.</p>
-                    <ul>
-                        <li>Custom Trading Algorithms</li>
-                        <li>AI-Powered Market Analysis</li>
-                        <li>Secure Crypto Wallet Dev</li>
-                    </ul>
+                    <div>
+                        <h3>📈 Trading Bots & AI</h3>
+                        <p style="color:#888; margin-bottom:15px;">Automated financial tools and secure blockchain solutions.</p>
+                        <ul>
+                            <li>Custom Trading Algorithms</li>
+                            <li>AI-Powered Market Analysis</li>
+                            <li>Secure Crypto Wallet Dev</li>
+                        </ul>
+                    </div>
+                    <span style="color:var(--primary); font-size:0.9rem;">Learn More →</span>
                 </div>
             </a>
 
             <a href="security.html" class="card-link">
                 <div class="card">
-                    <h3>🔒 Ethical Hacking & Security</h3>
-                    <p>Proactive security measures to protect your assets.</p>
-                    <ul>
-                        <li>Vulnerability Assessments</li>
-                        <li>Penetration Testing</li>
-                        <li>Security Audits</li>
-                    </ul>
+                    <div>
+                        <h3>🔒 Ethical Hacking & Security</h3>
+                        <p style="color:#888; margin-bottom:15px;">Proactive security measures to protect your assets.</p>
+                        <ul>
+                            <li>Vulnerability Assessments</li>
+                            <li>Penetration Testing</li>
+                            <li>Security Audits</li>
+                        </ul>
+                    </div>
+                    <span style="color:var(--primary); font-size:0.9rem;">Learn More →</span>
                 </div>
             </a>
 
         </div>
-    </section>
+    </div>
 
-    <section id="contact">
+    <div id="contact" class="section-wrapper">
         <h2 class="section-title">Contact Us</h2>
         <div class="grid">
             
-            <div class="card">
-                <a href="mailto:deenfinacials@gmail.com" class="contact-link">
-                    <h3>📧 Email & Google Meet</h3>
+            <a href="mailto:deenfinacials@gmail.com" class="card-link">
+                <div class="card" style="text-align: center; justify-content: center; padding: 50px 20px;">
+                    <h3 style="margin-bottom: 5px;">📧 Email</h3>
                     <p class="contact-info">deenfinacials@gmail.com</p>
-                    <p style="font-size:0.8rem; color:#888; margin-top:5px;">Click to Send Mail</p>
-                </a>
-            </div>
+                    <p class="sub-text">Click to Send Mail</p>
+                </div>
+            </a>
 
-            <div class="card">
-                <a href="https://wa.me/2349138091264" class="contact-link" target="_blank">
-                    <h3>📱 WhatsApp</h3>
+            <a href="https://wa.me/2349138091264" class="card-link" target="_blank">
+                <div class="card" style="text-align: center; justify-content: center; padding: 50px 20px;">
+                    <h3 style="margin-bottom: 5px;">📱 WhatsApp</h3>
                     <p class="contact-info">+234 913 809 1264</p>
-                    <p style="font-size:0.8rem; color:#888; margin-top:5px;">Click to Chat</p>
-                </a>
-            </div>
+                    <p class="sub-text">Click to Chat</p>
+                </div>
+            </a>
 
-            <div class="card">
-                <a href="https://x.com/DeenFinance" class="contact-link" target="_blank">
-                    <h3>✖️ X (Twitter)</h3>
+            <a href="https://x.com/DeenFinance" class="card-link" target="_blank">
+                <div class="card" style="text-align: center; justify-content: center; padding: 50px 20px;">
+                    <h3 style="margin-bottom: 5px;">✖️ X (Twitter)</h3>
                     <p class="contact-info">@DeenFinance</p>
-                    <p style="font-size:0.8rem; color:#888; margin-top:5px;">Click to Follow</p>
-                </a>
-            </div>
+                    <p class="sub-text">Click to Follow</p>
+                </div>
+            </a>
 
-            <div class="card">
-                <a href="https://discord.com/users/1101254191202189402" class="contact-link" target="_blank">
-                    <h3>💬 Discord</h3>
+            <a href="https://discord.com/users/1101254191202189402" class="card-link" target="_blank">
+                <div class="card" style="text-align: center; justify-content: center; padding: 50px 20px;">
+                    <h3 style="margin-bottom: 5px;">💬 Discord</h3>
                     <p class="contact-info">deenfinance</p>
-                    <p style="font-size:0.8rem; color:#888; margin-top:5px;">Click to Chat</p>
-                </a>
-            </div>
+                    <p class="sub-text">Click to Chat</p>
+                </div>
+            </a>
 
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="footer-slogan">
             <span>Innovate, Build, Grow</span> | Your Tech and Growth Partner
         </div>
-        <p>&copy; 2026 DeenFinacials.Co. All rights reserved.</p>
+        <p style="color: #444;">&copy; 2026 DeenFinacials.Co. All rights reserved.</p>
     </footer>
 
 </body>
-</html>
+                                                               </html>
