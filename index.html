@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeenFinacials.Co | Innovate. Build. Grow.</title>
+    
+    <link rel="preload" as="image" href="logo.png" fetchpriority="high">
+
     <style>
-        /* --- THEME: CYBER COMMAND V2 --- */
+        /* --- THEME: CYBER COMMAND V3 --- */
         :root {
             --bg-deep: #020617;
             --glass-panel: rgba(15, 23, 42, 0.6);
@@ -22,7 +25,6 @@
             font-family: var(--font-display);
             margin: 0;
             padding: 0;
-            /* Cyber Grid Background */
             background-image: 
                 linear-gradient(var(--border-color) 1px, transparent 1px),
                 linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
@@ -30,39 +32,45 @@
             overflow-x: hidden;
         }
 
-        /* --- NAV: LOGO OUTSPOKEN --- */
+        /* --- NAV: LONELY AT THE TOP --- */
         nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
+            flex-direction: column; /* Stack vertically */
+            align-items: center;    /* Center everything */
+            padding: 40px 5% 20px 5%; /* Big top padding */
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--border-color);
-            position: sticky;
-            top: 0;
+            position: relative; /* Scrolls away naturally */
+            background: rgba(2, 6, 23, 0.9); 
             z-index: 1000;
-            background: rgba(2, 6, 23, 0.7); /* Subtle dark glass */
+        }
+
+        .logo-container {
+            margin-bottom: 30px; /* Pushes the menu links down away from logo */
         }
 
         .logo-container img {
-            height: 70px; /* Much bigger */
-            width: auto;
+            width: 320px; /* MASSIVE SIZE */
+            max-width: 90vw; /* Safe for mobile */
+            height: auto;
             display: block;
-            filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.3)); /* Slight glow */
+            filter: drop-shadow(0 0 20px rgba(0, 168, 255, 0.2)); /* Premium Glow */
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 40px;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             transition: 0.3s;
             font-weight: 600;
         }
@@ -74,7 +82,7 @@
 
         .cta-button {
             border: 1px solid var(--neon-blue);
-            padding: 10px 25px;
+            padding: 12px 30px;
             border-radius: 4px;
             color: var(--neon-blue) !important;
             transition: 0.3s;
@@ -83,12 +91,12 @@
         .cta-button:hover {
             background: var(--neon-blue);
             color: #000 !important;
-            box-shadow: 0 0 20px rgba(0, 168, 255, 0.4);
+            box-shadow: 0 0 25px rgba(0, 168, 255, 0.5);
         }
 
         /* --- HERO SECTION --- */
         .hero-section {
-            padding: 120px 5%;
+            padding: 100px 5%;
             text-align: center;
         }
 
@@ -157,8 +165,8 @@
 
         .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
             padding: 0 5% 100px 5%;
             max-width: 1400px;
             margin: 0 auto;
@@ -168,7 +176,7 @@
             background: var(--glass-panel);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 35px;
+            padding: 40px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -182,18 +190,19 @@
             transform: translateY(-7px);
             border-color: var(--neon-blue);
             box-shadow: 0 10px 40px -10px rgba(0, 168, 255, 0.15);
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.9);
         }
 
         .panel h3 {
             font-size: 1.4rem;
             margin-top: 0;
             color: #fff;
+            margin-bottom: 15px;
         }
 
         .panel p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 1rem;
             line-height: 1.6;
         }
 
@@ -258,8 +267,8 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Hide links on mobile for simplicity, or add hamburger */
-            .logo-container img { height: 50px; }
+            .logo-container img { width: 250px; } /* Slightly smaller on phones */
+            .nav-links { gap: 20px; }
         }
     </style>
 </head>
@@ -267,7 +276,12 @@
 
     <nav>
         <div class="logo-container">
-            <img src="logo.png" alt="DeenFinacials" fetchpriority="high"> 
+            <img src="logo.png" 
+                 alt="DeenFinacials" 
+                 width="320" 
+                 height="120"
+                 fetchpriority="high"
+                 decoding="sync"> 
         </div>
         <div class="nav-links">
             <a href="#about">About</a>
