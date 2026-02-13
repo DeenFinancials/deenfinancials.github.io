@@ -3,60 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Automation | DeenFinacials.Co</title>
+    <title>AI Auto-Agents | DeenFinacials.Co</title>
     <style>
-        :root { --primary: #00a8ff; --dark-bg: #050505; --section-bg: #0f141f; --text-light: #f0f0f0; }
-        body { background-color: var(--dark-bg); color: var(--text-light); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
-        
-        .container { max-width: 800px; margin: 40px auto; }
-        .back-link { color: #888; text-decoration: none; display: inline-block; margin-bottom: 20px; font-weight: bold; }
-        .back-link:hover { color: var(--primary); }
-
-        .content-card {
-            background-color: var(--section-bg);
-            padding: 60px 40px;
-            border-radius: 20px;
-            border: 1px solid #222;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        :root {
+            --bg-deep: #020617;
+            --glass-panel: rgba(15, 23, 42, 0.6);
+            --border-color: rgba(56, 189, 248, 0.1);
+            --neon-blue: #00a8ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --font-display: 'Segoe UI', sans-serif;
         }
 
-        h1 { color: var(--primary); font-size: 2.5rem; margin-top: 0; margin-bottom: 10px; }
-        p.subtitle { font-size: 1.2rem; color: #fff; margin-bottom: 40px; opacity: 0.9; }
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-display);
+            margin: 0;
+            padding: 40px 20px;
+            background-image: 
+                linear-gradient(var(--border-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
 
-        h2 { border-bottom: 2px solid var(--primary); display: inline-block; margin-top: 40px; margin-bottom: 20px; color: #fff; padding-bottom: 10px; }
-        
-        .text-block { text-align: left; color: #ccc; font-size: 1.1rem; margin-bottom: 20px; }
-        
-        ul { text-align: left; background: #0a0e17; padding: 30px 50px; border-radius: 10px; border: 1px solid #333; margin-top: 10px; display: inline-block; width: 100%; box-sizing: border-box; }
-        li { margin-bottom: 15px; color: #ccc; }
-        li strong { color: var(--primary); }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--glass-panel);
+            border: 1px solid var(--border-color);
+            padding: 60px 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+        }
 
-        .btn { background: var(--primary); color: #000; padding: 15px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 40px; font-size: 1.1rem; transition: 0.3s; }
-        .btn:hover { background: #fff; box-shadow: 0 0 15px var(--primary); }
+        .back-btn {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+        .back-btn:hover { color: var(--neon-blue); }
+
+        h1 { font-size: 3rem; margin: 0 0 20px 0; color: #fff; }
+        
+        .highlight { color: var(--neon-blue); }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 40px;
+        }
+
+        li {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+        li strong { color: var(--text-main); margin-right: 10px; }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: var(--neon-blue);
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .cta-btn:hover {
+            box-shadow: 0 0 30px rgba(0, 168, 255, 0.4);
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back-btn">← RETURN TO DASHBOARD</a>
         
-        <div class="content-card">
-            <h1>Intelligent Chatbot Automation</h1>
-            <p class="subtitle">AI agents that work while you sleep.</p>
-            
-            <div class="text-block">
-                <p>Stop losing customers to delays. In the digital age, speed is everything. We build intelligent agents that work 24/7 to capture leads, answer queries, and close deals while you focus on high-level strategy.</p>
-            </div>
+        <h1>AI Auto-Agent <span class="highlight">Intelligence</span></h1>
+        <p>Deploy autonomous neural networks that work 24/7. We build intelligent bots that capture leads, qualify clients, and close deals while you sleep.</p>
 
-            <h2>Capabilities</h2>
-            <ul>
-                <li><strong>24/7 Support:</strong> Instant answers to FAQs, reducing support ticket volume by up to 70%.</li>
-                <li><strong>Lead Qualification:</strong> Bots that ask the right questions to filter high-value clients automatically.</li>
-                <li><strong>Workflow Integration:</strong> Connect your bot to your CRM, Email, and WhatsApp seamlessly.</li>
-            </ul>
+        <ul>
+            <li><strong>01 // Natural Language Processing</strong> Human-like interaction logic.</li>
+            <li><strong>02 // CRM Integration</strong> Syncs data directly to Salesforce/HubSpot.</li>
+            <li><strong>03 // Multi-Channel Grid</strong> Deploys to WhatsApp, Web, and Slack simultaneously.</li>
+        </ul>
 
-            <a href="index.html#contact" class="btn">Automate Your Business</a>
-        </div>
+        <a href="index.html#contact" class="cta-btn">DEPLOY AGENT</a>
     </div>
+
 </body>
 </html>
