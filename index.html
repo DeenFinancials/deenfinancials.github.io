@@ -28,12 +28,12 @@
             scroll-behavior: smooth;
         }
 
-        /* --- CENTERED NAVIGATION (UPDATED) --- */
+        /* --- NAVIGATION (UPDATED LAYOUT) --- */
         nav {
             display: flex;
-            flex-direction: column; /* Stacks Logo above Links */
-            align-items: center;    /* Centers everything */
-            padding: 1.5rem 5%;
+            flex-direction: column; 
+            align-items: center;    
+            padding: 2rem 5%; /* More top padding for the "lonely" look */
             background-color: rgba(5, 5, 5, 0.95);
             backdrop-filter: blur(10px);
             position: sticky;
@@ -44,22 +44,29 @@
 
         .nav-brand {
             display: flex;
+            flex-direction: column; /* Stacks Logo on top of Text */
             align-items: center;
             gap: 15px;
-            font-size: 1.5rem; /* Larger Brand Name */
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 15px; /* Space between logo and links */
+            margin-bottom: 25px; /* Space between brand and links */
         }
 
         .nav-brand img {
-            /* YOUR SPECIFIC DIMENSIONS */
-            width: 100px;
-            height: 50px; 
-            object-fit: contain; /* Keeps logo shape perfect */
-            border-radius: 5px; /* Slight curve looks better than circle for wide logos */
-            border: 1px solid var(--primary);
-            padding: 2px;
+            width: 120px; /* Slightly larger for impact */
+            height: auto; 
+            object-fit: contain; 
+            /* REMOVED BORDERS AND PADDING */
+            border: none;
+            padding: 0;
+            display: block;
+        }
+
+        /* The Brand Name Text */
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .nav-links {
@@ -85,7 +92,7 @@
             background-color: var(--primary);
             color: #000 !important;
             padding: 8px 25px;
-            border-radius: 50px; /* Pill shape button */
+            border-radius: 50px; 
             font-weight: bold;
         }
 
@@ -271,8 +278,8 @@
 
     <nav>
         <div class="nav-brand">
-            <img src="logo.png" alt="DeenFinacials Logo"> 
-            DEENFINANCIALS.CO
+            <img src="logo.png" alt="DeenFinacials Logo">
+            <div class="brand-name">DEENFINANCIALS.CO</div>
         </div>
         <div class="nav-links">
             <a href="#about">About</a>
@@ -411,4 +418,4 @@
     </footer>
 
 </body>
-    </html>
+</html>
