@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeenFinacials.Co | Tech & Growth Partner</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #00a8ff; 
+            --dark-bg: #0a0e17; 
+            --card-bg: #151b29;
+            --text-light: #f0f0f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background-color: rgba(10, 14, 23, 0.95);
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid #333;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-brand img {
+            height: 50px; 
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #1a253a 0%, var(--dark-bg) 70%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            text-align: left;
+            padding-left: 20px;
+            color: #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-brand">
+            <img src="logo.png" alt="DeenFinacials Logo"> 
+            DEENFINANCIALS.CO
+        </div>
+        <div>
+            <a href="mailto:contact@deenfinancials.co" class="btn">Contact Us</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Innovate. <span>Build.</span> Grow.</h1>
+        <p>Your Tech & Growth Partner. We build unified systems to automate and scale your business.</p>
+        <a href="#services" class="btn">View Services</a>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <h3>💻 Web & App Development</h3>
+                <p>Full-cycle development for scalable digital products.</p>
+                <ul>
+                    <li>Frontend (React, Vue, HTML/CSS)</li>
+                    <li>Backend (Node.js, Python, PHP)</li>
+                    <li>Full Stack Architecture</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🤖 Chatbot Automation</h3>
+                <p>Intelligent assistants that work while you sleep.</p>
+                <ul>
+                    <li>24/7 Customer Support Bots</li>
+                    <li>Lead Generation Automation</li>
+                    <li>Business Workflow Integration</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🔒 Ethical Hacking & Security</h3>
+                <p>Proactive security measures to protect your assets.</p>
+                <ul>
+                    <li>Vulnerability Assessments</li>
+                    <li>Penetration Testing</li>
+                    <li>Security Audits</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 DeenFinacials.Co. All rights reserved.</p>
+    </footer>
+
+</body>
+  </html>
