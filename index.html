@@ -31,7 +31,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%; /* Increased padding */
+            padding: 1.5rem 5%;
             background-color: rgba(10, 14, 23, 0.95);
             position: sticky;
             top: 0;
@@ -73,16 +73,17 @@
             border-radius: 5px;
         }
 
-        /* Hero Section */
+        /* Hero Section - MASSIVE SPACING ADDED */
         .hero {
             text-align: center;
-            padding: 120px 20px; /* Increased padding */
+            padding: 160px 20px; /* Big top/bottom padding */
             background: radial-gradient(circle at center, #1a253a 0%, var(--dark-bg) 70%);
+            margin-bottom: 50px;
         }
 
         .hero h1 {
             font-size: 3rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .hero span {
@@ -93,7 +94,7 @@
             font-size: 1.2rem;
             opacity: 0.8;
             max-width: 600px;
-            margin: 0 auto 40px auto; /* Increased margin */
+            margin: 0 auto 40px auto;
         }
 
         .btn {
@@ -115,7 +116,7 @@
         /* Section Titles */
         h2.section-title {
             font-size: 2.5rem;
-            margin-bottom: 60px; /* More space below titles */
+            margin-bottom: 80px; /* Pushed title far above cards */
             border-bottom: 2px solid var(--primary);
             display: inline-block;
             padding-bottom: 15px;
@@ -123,7 +124,7 @@
 
         /* About Section */
         .about {
-            padding: 100px 5%; /* Increased padding */
+            padding: 140px 5%; /* Huge spacing */
             background-color: #0e121b; 
             text-align: center;
         }
@@ -142,19 +143,19 @@
 
         /* Services & Contact Section */
         .services, .contact {
-            padding: 100px 5%; /* Increased padding for separation */
+            padding: 140px 5%; /* Huge spacing between sections */
             text-align: center;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px; /* Increased gap between cards */
+            gap: 60px; /* Cards are pushed far apart */
         }
 
         .card {
             background-color: var(--card-bg);
-            padding: 40px; /* Increased internal padding */
+            padding: 40px;
             border-radius: 10px;
             border: 1px solid #333;
             transition: transform 0.3s ease;
@@ -178,7 +179,7 @@
         }
 
         .card li {
-            margin-bottom: 8px; /* Space between list items */
+            margin-bottom: 10px; 
         }
 
         .contact-link {
@@ -199,7 +200,7 @@
         footer {
             background-color: #000;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px; /* Bigger footer */
             margin-top: 50px;
             border-top: 1px solid #333;
         }
