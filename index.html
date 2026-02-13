@@ -31,7 +31,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
+            padding: 1.5rem 5%; /* Increased padding */
             background-color: rgba(10, 14, 23, 0.95);
             position: sticky;
             top: 0;
@@ -76,13 +76,13 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 100px 20px;
+            padding: 120px 20px; /* Increased padding */
             background: radial-gradient(circle at center, #1a253a 0%, var(--dark-bg) 70%);
         }
 
         .hero h1 {
             font-size: 3rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .hero span {
@@ -93,7 +93,7 @@
             font-size: 1.2rem;
             opacity: 0.8;
             max-width: 600px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 40px auto; /* Increased margin */
         }
 
         .btn {
@@ -115,15 +115,15 @@
         /* Section Titles */
         h2.section-title {
             font-size: 2.5rem;
-            margin-bottom: 50px;
+            margin-bottom: 60px; /* More space below titles */
             border-bottom: 2px solid var(--primary);
             display: inline-block;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
 
         /* About Section */
         .about {
-            padding: 80px 5%;
+            padding: 100px 5%; /* Increased padding */
             background-color: #0e121b; 
             text-align: center;
         }
@@ -137,28 +137,28 @@
         }
 
         .about-content p {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         /* Services & Contact Section */
         .services, .contact {
-            padding: 80px 5%;
+            padding: 100px 5%; /* Increased padding for separation */
             text-align: center;
         }
 
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 50px; /* Increased gap between cards */
         }
 
         .card {
             background-color: var(--card-bg);
-            padding: 30px;
+            padding: 40px; /* Increased internal padding */
             border-radius: 10px;
             border: 1px solid #333;
             transition: transform 0.3s ease;
-            height: 100%; /* Ensures equal height */
+            height: 100%; 
         }
 
         .card:hover {
@@ -168,13 +168,17 @@
 
         .card h3 {
             color: var(--primary);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .card ul {
             text-align: left;
             padding-left: 20px;
             color: #ccc;
+        }
+
+        .card li {
+            margin-bottom: 8px; /* Space between list items */
         }
 
         .contact-link {
@@ -187,7 +191,7 @@
         .contact-info {
             font-size: 1.1rem;
             color: #ccc;
-            margin-top: 10px;
+            margin-top: 15px;
             word-break: break-all;
         }
 
@@ -195,14 +199,14 @@
         footer {
             background-color: #000;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
             margin-top: 50px;
             border-top: 1px solid #333;
         }
 
         .footer-slogan {
             font-size: 1.2rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             color: #ccc;
         }
 
